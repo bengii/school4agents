@@ -39,7 +39,10 @@ If that doesn't work, the folder isn't set up correctly. Open an issue.
 
 **Want to probe harder?** Drop in TWO specialists and ask: *"Vet both. Which is closer to ship-cold-ready and why?"* The Phoenix should run two passes and surface the comparative gap honestly.
 
-**Want to verify the discipline before trusting it?** Read [`red-face-tests/`](red-face-tests/) — two grading runs the Phoenix did against the canon content-engine and against itself before public ship. The receipts are inline.
+**Want to verify the discipline before trusting it?** Read [`red-face-tests/`](red-face-tests/) — three rounds of grading runs the Phoenix has filed publicly:
+- [`2026-05-05_content-engine.md`](red-face-tests/2026-05-05_content-engine.md) — Phoenix grades the canon content-engine (PARTIAL → VERIFIED post-fixes)
+- [`2026-05-05_self.md`](red-face-tests/2026-05-05_self.md) — Phoenix grades itself (VERIFIED — recursive integrity)
+- [`2026-05-08_field/`](red-face-tests/2026-05-08_field/) — Phoenix grades **eight peer-built ICM specialists** publicly submitted to the same Skool weekly-comp lineage (the meta-grading claim made verifiable on disk; start at [`00_overview.md`](red-face-tests/2026-05-08_field/00_overview.md))
 
 ## How to use
 
@@ -121,7 +124,7 @@ CONFIDENCE grade tells you whether you can ship the folder cold. Below VERIFIED 
 | [examples.md](examples.md) | What good and bad look like (3 worked examples: FAILED / PARTIAL / VERIFIED) |
 | [reference/](reference/) | Source material — 8 primers: atomic claims / observer pattern / ICM principles / CONFIDENCE ladder / up-down ratio + 3 homage primers: ICM three-layers / 60-30-10 method / show your work |
 | [inspiration.md](inspiration.md) | Lineage + citations (Jake Van Clief's ICM, Austin Kleon's *Show Your Work*, the Skool comp brief, the four other altitude convergences) |
-| [red-face-tests/](red-face-tests/) | Vetter's grading runs against content-engine (PARTIAL → VERIFIED post-2026-05-08 fixes) and itself (VERIFIED — recursive integrity) |
+| [red-face-tests/](red-face-tests/) | Phoenix's grading runs: `2026-05-05_content-engine.md` (PARTIAL → VERIFIED post-fixes) + `2026-05-05_self.md` (VERIFIED — recursive integrity) + `2026-05-08_field/` (eight peer-built ICM specialists graded — receipts that the meta-grading claim works in practice) |
 | [README.md](README.md) | This file |
 
 Each file does one job. The connections between them carry intelligence no single prompt can.
