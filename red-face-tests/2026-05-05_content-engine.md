@@ -47,7 +47,7 @@ CONFIDENCE: PARTIAL
 - C5 (examples): PARTIAL — engine/content-types.md defines 11 format types but does NOT contain worked one-topic-to-N-platforms transformations. The closest thing to examples is the v0.1 topic inventory in engine/topic-class-membrane-events.md (4 entries listed). Missing: actual side-by-side worked example showing one membrane event becoming 5-7 platform-native posts.
 - C6 (reference): PARTIAL — engine/recon/README.md references source playbooks; index.md cross-links to canon files. NO dedicated `reference/` folder with curated source documents (Sunday recon excerpts, Resonant Computing recon excerpts, peer-author canonical posts, source playbook quotes). Claims rely on cross-references rather than self-contained source material.
 - C7 (cold-onboard): VERIFIED — README.md + index.md together enable a stranger to understand the system in ~5 min. Tested mentally: a cold reader sees the 4-folder structure, atomicity primitive, recon→production loop, voice-character-map dimension, and how to use the engine.
-- C8 (voice integrity): VERIFIED — voice/voice-character-map.md explicitly maps Corvus / Jason / Ludo / Is:Male per slot. Voice Wall absolute is referenced consistently. No voice contradictions across the 22 files.
+- C8 (voice integrity): VERIFIED — voice/voice-character-map.md is single-source-of-truth for voice ownership per surface. Voice Wall absolute is referenced consistently. No voice contradictions across the 22 files.
 - C9 (evidence-grounding via cross-references): VERIFIED — claims trace to canon files (`_canon/brand/ludo-brand-guide-v0.1.md`, voice cards, brand canon §11, membrane-events README). Spot-check: 6 of 6 sampled cross-refs resolved.
 - C10 (override flagging): VERIFIED — every platform file (x, reddit-cyberpunk, booktok, newsletter, linkedin, hn, threads) explicitly flags Cadence Covenant frequency override. newsletter.md flags Voice Wall absolute.
 
@@ -64,7 +64,7 @@ The content-engine is structurally sound and ICM-compliant in spirit but uses a 
    - `reference/sunday-recon-excerpts.md` (vocabulary + tropes from `_ops/trailer/working/sunday-recon-2026-05-03.md`)
    - `reference/resonant-recon-excerpts.md` (signatory list + framing rule from `research/external-landscape/resonantos-2026-05-03.md`)
    - `reference/source-playbook-deronin.md` (key quotes from the canonical source playbook)
-   - `reference/voice-cards-distilled.md` (one-page summary of Corvus/Jason/Ludo for cold readers)
+   - `reference/voice-cards-distilled.md` (one-page voice register summary for cold readers)
 
 3. **Optional polish**: rename or alias index.md → identity.md OR add a top-level note acknowledging the file maps to ICM identity-role.
 

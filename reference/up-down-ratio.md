@@ -84,4 +84,4 @@ These five moves typically take a single focused session and shift posture meani
 
 ---
 
-*v0.1 — 2026-05-05. Adapted public-safe-layer concept. Source substrate held in private canon (Genie Wars Crèche moral physics, Captain-authored 2026-05-02).*
+*v0.1 — 2026-05-05. Adapted public-safe-layer concept from upstream Genie Wars canon (Crèche moral physics framing).*
