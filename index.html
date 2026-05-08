@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>school4agents — the folder that runs your business</title>
+<meta name="description" content="Specialist Vetter v0.1. The folder that runs your business — now ships with a fully trained agent. Drop your folder in; we evaluate it, train an agent to execute it, and hand both back cold-ready. ICM-pure, MIT-licensed.">
+<meta property="og:title" content="school4agents — the folder that runs your business">
+<meta property="og:description" content="Specialist Vetter v0.1. ICM-pure. The folder you'd build this weekend — but with a fully trained agent already inside.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://school4agents.com">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Roboto:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #000000;
+  --bg-alt: #0a0a0a;
+  --green: #00FF00;
+  --yellow: #FFFF00;
+  --cyan: #A5F2F3;
+  --white: #FFFFFF;
+  --grey: #888888;
+  --grey-2: #444444;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'Roboto', system-ui, sans-serif;
+  line-height: 1.6;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+body { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; max-width: 880px; margin: 0 auto; padding: 64px 28px 96px; width: 100%; }
+header.brand {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--green);
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  margin-bottom: 56px;
+}
+header.brand .dot { color: var(--yellow); }
+h1.hero {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: clamp(32px, 5.6vw, 56px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  color: var(--white);
+}
+h1.hero em { font-style: normal; color: var(--green); }
+.lede {
+  font-size: 19px;
+  color: var(--grey);
+  max-width: 640px;
+  margin-bottom: 40px;
+}
+.lede strong { color: var(--white); font-weight: 500; }
+section { margin-top: 64px; }
+section h2 {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  color: var(--cyan);
+  margin-bottom: 18px;
+}
+section p + p { margin-top: 14px; }
+.cta-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 36px; }
+a.cta {
+  display: inline-block;
+  padding: 14px 22px;
+  background: var(--green);
+  color: var(--bg);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: filter 0.15s;
+}
+a.cta:hover { filter: brightness(1.1); }
+a.cta.ghost {
+  background: transparent;
+  color: var(--green);
+  border: 1px solid var(--green);
+}
+a.cta.ghost:hover { background: var(--green); color: var(--bg); }
+ul.bare { list-style: none; padding: 0; }
+ul.bare li { padding: 8px 0; border-bottom: 1px solid var(--grey-2); }
+ul.bare li:last-child { border-bottom: none; }
+ul.bare li code {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--yellow);
+  font-size: 14px;
+}
+ul.bare li span.role { color: var(--grey); margin-left: 8px; }
+.kicker {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--yellow);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.report {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  background: var(--bg-alt);
+  border: 1px solid var(--grey-2);
+  padding: 20px;
+  margin-top: 18px;
+  white-space: pre-wrap;
+  color: var(--cyan);
+  border-radius: 2px;
+  overflow-x: auto;
+}
+.report .label { color: var(--green); }
+.report .grade { color: var(--yellow); }
+footer {
+  border-top: 1px solid var(--grey-2);
+  padding: 28px 28px 36px;
+  font-size: 14px;
+  color: var(--grey);
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+}
+footer a { color: var(--cyan); text-decoration: none; }
+footer a:hover { color: var(--green); }
+.lineage {
+  font-size: 14px;
+  color: var(--grey);
+  margin-top: 18px;
+}
+.lineage strong { color: var(--white); font-weight: 500; }
+.lineage a { color: var(--cyan); text-decoration: underline; text-decoration-color: var(--grey-2); }
+.lineage a:hover { color: var(--green); }
+@media (max-width: 600px) {
+  main { padding: 40px 22px 64px; }
+  .cta-row { flex-direction: column; }
+  a.cta { text-align: center; }
+}
+</style>
+</head>
+<body>
+<main>
+  <header class="brand">school4agents<span class="dot">.</span>com</header>
+
+  <h1 class="hero">The folder that runs your business — now ships with a <em>fully trained agent</em>.</h1>
+
+  <p class="lede">Drop your folder in. We put it through evaluation, train an agent to execute it, and hand both back cold-ready. <strong>ICM-pure. Read-only grader. MIT-licensed.</strong></p>
+
+  <div class="cta-row">
+    <a class="cta" href="https://github.com/bengii/school4agents">View the repo</a>
+    <a class="cta ghost" href="https://github.com/bengii/school4agents/blob/main/README.md">Read the README</a>
+  </div>
+
+  <section>
+    <span class="kicker">60-second explain</span>
+    <h2>What this is</h2>
+    <p>You built a folder-based AI specialist using ICM (Interpretable Context Methodology — the folder-as-architecture pattern: <code>identity.md</code>, <code>rules.md</code>, <code>examples.md</code>, <code>reference/</code>, <code>README.md</code>).</p>
+    <p>It might work. You're not sure. There's no way to grade it cold.</p>
+    <p><strong>This vetter grades it.</strong> Drop your specialist folder in. The vetter reads it (read-only — never modifies your files), decomposes the folder into atomic claims, tests each claim against the folder's own evidence, and returns a structured Report with a CONFIDENCE grade.</p>
+    <p>Then you ship a folder you can stand behind. Or you fix the gaps the Report named.</p>
+  </section>
+
+  <section>
+    <span class="kicker">What's inside</span>
+    <h2>The Vetter folder</h2>
+    <ul class="bare">
+      <li><code>identity.md</code><span class="role">Who the vetter is — Crèche-Manager voice, peer-respecting consultant</span></li>
+      <li><code>rules.md</code><span class="role">How it responds — read-only, atomic, evidence, CONFIDENCE, structured Report</span></li>
+      <li><code>examples.md</code><span class="role">Three worked grading runs — FAILED, PARTIAL, VERIFIED</span></li>
+      <li><code>reference/</code><span class="role">Eight primers — atomic claims, observer pattern, ICM, CONFIDENCE ladder, up-down ratio, ICM three-layers, 60/30/10 method, Show Your Work</span></li>
+      <li><code>inspiration.md</code><span class="role">Lineage + citations</span></li>
+      <li><code>red-face-tests/</code><span class="role">Two grading runs the vetter ran on its own canon and itself before public ship</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="kicker">What you get back</span>
+    <h2>The Report</h2>
+    <pre class="report">## Report
+
+<span class="label">STATUS:</span> verified | failed | unsure
+<span class="label">CONFIDENCE:</span> <span class="grade">PERFECT | VERIFIED | PARTIAL | FEEDBACK | FAILED</span>
+
+### What did you verify?
+- &lt;atomic claim&gt;: &lt;evidence + verdict&gt;
+
+### What could you not verify?
+- &lt;claim&gt;: &lt;why — missing oracle / fixture / ambiguity&gt;
+
+### What feedback did the vetter give?
+&lt;paraphrase of corrective findings&gt;
+
+### What should you fix first?
+&lt;prioritized improvement list&gt;
+
+### Verification metadata
+- atomic_claims_total / verified / failed / unverified
+- up_down_ratio: &lt;ratio classification&gt;</pre>
+    <p style="margin-top:18px; color: var(--grey); font-size:15px;">CONFIDENCE grade tells you whether you can ship the folder cold. Below VERIFIED → don't ship. At VERIFIED+ → ship.</p>
+  </section>
+
+  <section>
+    <span class="kicker">How to use</span>
+    <h2>Three methods — pick one</h2>
+    <ul class="bare">
+      <li><strong style="color: var(--white);">Claude Projects:</strong><span class="role">Upload the folder to a project knowledge base. Drop your specialist as a new attachment. Ask: "Vet this specialist."</span></li>
+      <li><strong style="color: var(--white);">Claude.ai paste:</strong><span class="role">Paste <code>identity.md</code> + <code>rules.md</code> into a fresh chat. Add: "You are this vetter. Now grade the specialist below."</span></li>
+      <li><strong style="color: var(--white);">Claude Code / Cursor / agentic CLI:</strong><span class="role">Point your agent at the folder. Drop your specialist beside it. Say: "Run the vetter against the specialist."</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="kicker">Lineage</span>
+    <h2>Built ICM-pure</h2>
+    <p class="lineage">Built atop <strong>Jake Van Clief's Interpretable Context Methodology</strong> as taught at the <a href="https://www.skool.com/quantum-quill-lyceum-1116">Quantum Quill Lyceum</a>. The 60/30/10 method runs the grader (60% deterministic file checks, 30% rule-based logic, 10% genuine judgment). The multiple-smaller-voice-files pattern runs the voice register. Austin Kleon's "Show your work" runs the public red-face test discipline — the Vetter graded its own canon AND itself before public ship.</p>
+    <p class="lineage">Born from watching atomicity converge across <strong>five independent builders in eight days</strong>: Jake's ICM + Disler's verifier-agent + DeRonin's content-engine + the Crèche moral physics + this Vetter. We decided the next move was to make that gradeable.</p>
+    <p class="lineage">Full lineage at <a href="https://github.com/bengii/school4agents/blob/main/inspiration.md">inspiration.md</a>.</p>
+  </section>
+</main>
+
+<footer>
+  v0.1 &nbsp;·&nbsp; MIT &nbsp;·&nbsp; <a href="https://github.com/bengii/school4agents">repo</a> &nbsp;·&nbsp; <a href="https://siliconchimps.com">siliconchimps.com</a> &nbsp;·&nbsp; <a href="https://geniewars.com">geniewars.com</a>
+</footer>
+</body>
+</html>
