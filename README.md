@@ -24,11 +24,22 @@ You drop your specialist folder in. The vetter:
 
 Then you ship a folder you can stand behind. Or you fix the gaps the Report named.
 
-## The 5-minute cold-onboarding test
+## The 5-minute cold-tester test
 
-Someone with no context should be able to use this folder and get a graded health card on their own specialist in under 5 minutes.
+A cold tester with no context should be able to do this:
 
-If you have to explain it, it's not done. If you do — open an issue.
+1. Open a Claude Project at [claude.ai](https://claude.ai)
+2. Upload the contents of this folder to the project knowledge base — `identity.md`, `rules.md`, `examples.md`, `inspiration.md`, the `reference/` folder, and the `red-face-tests/` folder
+3. Start a new chat in the Project
+4. Drop a specialist folder as an attachment (or paste its contents)
+5. Type: *"Vet this specialist."*
+6. Receive a structured Phoenix Report — STATUS / CONFIDENCE / atomic claims / fix-first / up-down — in one response
+
+If that doesn't work, the folder isn't set up correctly. Open an issue.
+
+**Want to probe harder?** Drop in TWO specialists and ask: *"Vet both. Which is closer to ship-cold-ready and why?"* The Phoenix should run two passes and surface the comparative gap honestly.
+
+**Want to verify the discipline before trusting it?** Read [`red-face-tests/`](red-face-tests/) — two grading runs the Phoenix did against the canon content-engine and against itself before public ship. The receipts are inline.
 
 ## How to use
 
@@ -36,7 +47,7 @@ If you have to explain it, it's not done. If you do — open an issue.
 
 1. Clone or download this repo
 2. Open Claude Projects → create new project "Specialist Vetter"
-3. Upload the contents of this folder (5 files + `reference/`) to the project knowledge base
+3. Upload the contents of this folder (4 root `.md` files + `inspiration.md` + `reference/` folder + `red-face-tests/` folder) to the project knowledge base
 4. Start a new chat in that project
 5. Drop your specialist folder's content as a new attachment OR paste the file contents
 6. Ask: *"Vet this specialist."*
@@ -92,6 +103,14 @@ CONFIDENCE grade tells you whether you can ship the folder cold. Below VERIFIED 
 - ❌ Does not guess. If a claim can't be verified, status is `unsure`, gap flagged.
 - ❌ Does not grade against vibe. Every verdict cites evidence.
 - ❌ Does not fall back to "helpful at the cost of honest." False PERFECT is the worst failure mode.
+
+## Out of scope — what the Phoenix won't grade
+
+- **Code repos that aren't ICM specialists.** The Phoenix grades a folder as a specialist (identity / rules / examples / reference / README — or the role-equivalents per `rules.md §"Form mapping"`). It does not grade arbitrary codebases.
+- **Runtime behavior of an agent.** It evaluates the FOLDER, not what happens when the specialist is actually invoked in production. Production behavior is a different verifier.
+- **Lone files.** ICM is folder-shaped. A single `identity.md` without rules + examples + reference is not gradable; it'll come back FAILED with a "not enough atomic claims to verify" note.
+- **Substrate that isn't on disk.** If your specialist depends on private prompts, hidden context, or proprietary data the Phoenix can't see, it'll mark those claims unverifiable rather than guessing.
+- **Anything outside read-only scope.** It will not write, modify, suggest edits inline, or run the specialist for you. It grades. You ship.
 
 ## What's inside this folder
 

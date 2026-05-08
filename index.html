@@ -472,6 +472,33 @@ footer a:hover {
   </section>
 
   <section>
+    <span class="kicker">Cold-tester test</span>
+    <h2>Five minutes, start to Report</h2>
+    <p>A cold tester with no context should be able to do this:</p>
+    <ul class="bare">
+      <li><strong>1.</strong><span class="role">Open a Claude Project at <a href="https://claude.ai" style="color: var(--phoenix); text-decoration: none; border-bottom: 1px solid var(--phoenix-soft);">claude.ai</a></span></li>
+      <li><strong>2.</strong><span class="role">Upload the Phoenix folder contents to project knowledge — the 4 root <code>.md</code> files + <code>inspiration.md</code> + <code>reference/</code> + <code>red-face-tests/</code></span></li>
+      <li><strong>3.</strong><span class="role">Drop a specialist folder as an attachment (or paste its contents)</span></li>
+      <li><strong>4.</strong><span class="role">Type: <em>"Vet this specialist."</em></span></li>
+      <li><strong>5.</strong><span class="role">Receive a structured Phoenix Report — STATUS / CONFIDENCE / atomic claims / fix-first / up-down — in one response</span></li>
+    </ul>
+    <p style="margin-top: 22px;"><strong>Want to probe harder?</strong> Drop in two specialists and ask: <em>"Vet both. Which is closer to ship-cold-ready and why?"</em> The Phoenix should run two passes and surface the comparative gap honestly.</p>
+    <p><strong>Want to verify the discipline before trusting it?</strong> Read <a href="https://github.com/bengii/school4agents/tree/main/red-face-tests" style="color: var(--phoenix); border-bottom: 1px solid var(--phoenix-soft); text-decoration: none;">red-face-tests/</a> — two grading runs the Phoenix did against the canon content-engine and against itself before public ship. The receipts are inline.</p>
+  </section>
+
+  <section>
+    <span class="kicker">Out of scope</span>
+    <h2>What the Phoenix won't grade</h2>
+    <ul class="bare">
+      <li><strong>Code repos that aren't ICM specialists</strong><span class="role">It grades a folder as a specialist (identity / rules / examples / reference / README — or role-equivalents). Not arbitrary codebases.</span></li>
+      <li><strong>Runtime behavior of an agent</strong><span class="role">It evaluates the FOLDER, not what happens when the specialist runs in production. Production behavior is a different verifier.</span></li>
+      <li><strong>Lone files</strong><span class="role">ICM is folder-shaped. A single <code>identity.md</code> without rules + examples + reference comes back FAILED — not enough atomic claims to verify.</span></li>
+      <li><strong>Substrate that isn't on disk</strong><span class="role">If your specialist depends on private prompts or hidden context the Phoenix can't see, it marks those claims unverifiable rather than guessing.</span></li>
+      <li><strong>Anything outside read-only scope</strong><span class="role">It will not write, modify, suggest edits inline, or run the specialist for you. It grades. You ship.</span></li>
+    </ul>
+  </section>
+
+  <section>
     <span class="kicker">How to use</span>
     <h2>Three ways to send in the Phoenix</h2>
     <ul class="bare">
